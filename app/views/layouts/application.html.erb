@@ -9,39 +9,26 @@
 <body>
 
   <div class="nav-side-menu">
-      <div class="brand">Code_Snippets</div>
+      <div class="brand"> C_S </div>
         <i class="toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
           <div class="menu-list">
-              <ul id="menu-content" class="menu-content collapse out">
+              <ul>
 
-                   <li>
-                    <a href="#">
-                    <i class=""></i> Create
+                  <li><%= link_to "Home", welcome_index_path %></li>
+                   <li><%= link_to "Create", new_snippet_path %></li>
+                   <li><%= link_to 'List', controller: 'snippets' %></li>
+                   <li>Sign in</li>
+                   <!-- <li>
+                     Sign out
                     </a>
-                    </li>
-                   <li>
-                    <a href="#">
-                    <i class=""></i> View
-                    </a>
-                    </li>
-
-                   <li>
-                    <a href="#">
-                    <i class=""></i> Sign in
-                    </a>
-                  </li>
-                   <li>
-                    <a href="#">
-                    <i class=""></i> Sign out
-                    </a>
-                  </li>
+                  </li> -->
               </ul>
        </div>
   </div>
 
 
 
-<div class="container">
+<div class="container1">
   <%= yield %>
 
 </div>

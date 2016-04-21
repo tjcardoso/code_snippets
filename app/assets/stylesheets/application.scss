@@ -41,7 +41,9 @@
 
  .field_with_errors { border: 3px solid lightcoral; animation: border-pulsate 2s infinite; border-radius: 10px; padding: 10px 10px 10px 2px;}
 
-
+ .container1{
+   margin-left: 80px;
+ }
  .nav-side-menu {
    overflow: auto;
    font-size: 16px;
@@ -49,7 +51,7 @@
    background-color: #2e353d;
    position: fixed;
    top: 0px;
-   width: 200px;
+   width: 75px;
    height: 100%;
    color: #e1ffff;
  }
@@ -58,7 +60,7 @@
    line-height: 50px;
    display: block;
    text-align: center;
-   font-size: 20px;
+   font-size: 16px;
  }
  .nav-side-menu .toggle-btn {
    display: none;
@@ -171,6 +173,20 @@
    margin: 0px;
    padding: 0px;
  }
+
+ .CodeRay {
+   background-color: #232323;
+   border: 1px solid black;
+   font-family: 'Courier New', 'Terminal', monospace;
+   color: #E6E0DB;
+   padding: 3px 5px;
+   overflow: auto;
+   font-size: 12px;
+   margin: 12px 0;
+ }
+ 
+
+
 
 
  // #container {

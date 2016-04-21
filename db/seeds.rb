@@ -6,29 +6,28 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 Snippet.delete_all
+Category.delete_all
 
-Snippet.create(
-  id: 1,
-  title: "My Very First Snippet",
-  kind: "Q",
-  work:
-  %Q{### There Is Something You Should Know!
-
-  This is my very first post using markdown!
-
-  How do you like it?  I learned this from [RichOnRails.com](http://richonrails.com/articles/rendering-markdown-with-redcarpet)!}
-)
-
-Snippet.create(
-  id: 2,
-  title: "My Second Snippet",
-  kind: "Q",
-  work:
-  %Q{### My List of Things To Do!
-
-  Here is the list of things I wish to do!
-
-  * write more posts
-  * write even more posts
-  * write even more posts!}
-)
+Category.create(kind: "C")
+Category.create(kind: "Cplusplus")
+Category.create(kind: "CSS")
+Category.create(kind: "Clojure")
+Category.create(kind: "Debug")
+Category.create(kind: "Delphi")
+Category.create(kind: "Diff")
+Category.create(kind: "ERB")
+Category.create(kind: "Groovy")
+Category.create(kind: "HAML")
+Category.create(kind: "HTML")
+Category.create(kind: "JSON")
+Category.create(kind: "Java")
+Category.create(kind: "JavaScript")
+Category.create(kind: "PHP")
+Category.create(kind: "Python")
+Category.create(kind: "Raydebug")
+Category.create(kind: "Ruby")
+Category.create(kind: "SQL")
+Category.create(kind: "Scanner")
+Category.create(kind: "Text")
+Category.create(kind: "XML")
+Category.create(kind: "YAML")

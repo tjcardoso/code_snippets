@@ -1,8 +1,11 @@
 <h1><%= @snippet.title %></h1>
-<hr />
 
-<p>
-  <%= markdown(@snippet.body) %>
-</p>
-<h4>Published <%= time_ago_in_words @snippet.published_at %> ago</h4>
+<h4>Language: <%= @snippet.category.kind %> </h4>
+
+<div class="">
+  <% html = CodeRay.scan(@snippet.work, @snippet.category.kind).div(:line_numbers => :table) %>
+  <%= html.html_safe %>
+</div>
+<br>
+
 <%= link_to "Back to Index", snippets_path %>
