@@ -1,0 +1,8 @@
+<h1><%= @snippet.title %></h1>
+<hr />
+
+<p>
+  <%= markdown(@snippet.body) %>
+</p>
+<h4>Published <%= time_ago_in_words @snippet.published_at %> ago</h4>
+<%= link_to "Back to Index", snippets_path %>

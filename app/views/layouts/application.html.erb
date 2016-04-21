@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Code_Snippets</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+  <div class="nav-side-menu">
+      <div class="brand">Code_Snippets</div>
+        <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+          <div class="menu-list">
+              <ul id="menu-content" class="menu-content collapse out">
+
+                   <li>
+                    <a href="#">
+                    <i class="fa fa-code fa-lg"></i> Create
+                    </a>
+                    </li>
+                   <li>
+                    <a href="#">
+                    <i class="fa fa-list fa-lg"></i> View
+                    </a>
+                    </li>
+
+                   <li>
+                    <a href="#">
+                    <i class="fa fa-user fa-lg"></i> Sign in
+                    </a>
+                  </li>
+                   <li>
+                    <a href="#">
+                    <i class="fa fa-user fa-lg"></i> Sign out
+                    </a>
+                  </li>
+              </ul>
+       </div>
+  </div>
+
+
+
+<div class="container">
+  <%= yield %>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+<h1>Snippets:</h1>
+<hr>
+<% @snippets.each do |post| %>
+  <h1><%= link_to snippet.title, post %></h1>
+
+  <p>
+    <%= markdown(snippet.work) %>
+  </p>
+  <h5>Language: <%= snippet.kind %> </h5>
+
+  <% if snippet != @snippets.last %>
+  <hr />
+  <% end %>
+<% end %>
