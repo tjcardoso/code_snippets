@@ -1,3 +1,4 @@
+<div class="container">
 <h1>Snippets:</h1>
 <hr>
 <% @snippets.each do |snippet| %>
@@ -5,12 +6,15 @@
 
   <h4>Language: <%= snippet.category.kind %> </h4>
 
-  <div class="container">
-    <% html = CodeRay.scan(snippet.work, snippet.category.kind).div(:line_numbers => :table) %>
-    <%= html.html_safe %>
-  </div>
+  <% if snippet.category.kind == "Markdown" %>
+      <%= markdown(snippet.work) %>
+    <% else %>
+      <% html = CodeRay.scan(snippet.work, snippet.category.kind).div(:line_numbers => :table) %>
+      <%= html.html_safe %>
+    <% end %>
 
   <% if snippet != @snippets.last %>
   <hr />
   <% end %>
 <% end %>
+</div>

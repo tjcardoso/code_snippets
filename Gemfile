@@ -28,6 +28,7 @@ gem 'bootswatch-rails'
 gem 'rails-erd'
 gem 'kaminari'
 gem 'coderay'
+gem 'redcarpet'
 gem 'cancancan'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'

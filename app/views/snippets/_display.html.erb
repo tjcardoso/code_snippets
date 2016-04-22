@@ -6,8 +6,10 @@
 
   <h4>Language: <%= snippet.category.kind %> </h4>
 
-    <% html = CodeRay.scan(snippet.work, snippet.category.kind).div(:line_numbers => :table) %>
-    <%= html.html_safe %>
+    <%# html = CodeRay.scan(snippet.work, snippet.category.kind).div(:line_numbers => :table) %>
+    <%#= html.html_safe %>
+    <%= markdown(snippet.work) %> 
+
   </div>
 
   <% if snippet != @snippets.last %>

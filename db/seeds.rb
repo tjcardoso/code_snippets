@@ -8,6 +8,7 @@
 Snippet.delete_all
 Category.delete_all
 
+
 Category.create(kind: "C")
 Category.create(kind: "Cplusplus")
 Category.create(kind: "CSS")
@@ -22,6 +23,7 @@ Category.create(kind: "HTML")
 Category.create(kind: "JSON")
 Category.create(kind: "Java")
 Category.create(kind: "JavaScript")
+Category.create(kind: "Markdown")
 Category.create(kind: "PHP")
 Category.create(kind: "Python")
 Category.create(kind: "Raydebug")
