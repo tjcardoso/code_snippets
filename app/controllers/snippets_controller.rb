@@ -24,7 +24,7 @@ class SnippetsController < ApplicationController
 
   def index
     @snippets = Snippet.all
-    
+    @category = Category.all
   end
 
   def show

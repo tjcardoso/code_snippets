@@ -1,20 +1,9 @@
+<h1>All Categories</h1>
+
 <div class="container">
-<h1>Snippets:</h1>
-<hr>
-<% @snippets.each do |snippet| %>
-  <h1><%= link_to snippet.title, snippet %></h1>
 
-  <h4>Language: <%= snippet.category.kind %> </h4>
+  <% @category.each do |c| %>
+   <%= link_to "#{c.kind} (#{c.snippets.count})", category_path(c) %> <br>
+  <% end  %>
 
-  <% if snippet.category.kind == "Markdown" %>
-      <%= markdown(snippet.work) %>
-    <% else %>
-      <% html = CodeRay.scan(snippet.work, snippet.category.kind).div(:line_numbers => :table) %>
-      <%= html.html_safe %>
-    <% end %>
-
-  <% if snippet != @snippets.last %>
-  <hr />
-  <% end %>
-<% end %>
 </div>
